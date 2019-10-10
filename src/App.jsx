@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import {
-  List,
-} from 'antd';
+import { List } from 'antd';
 import { getTrains } from './api';
 import Form from './Components/Form';
 
