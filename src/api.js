@@ -16,8 +16,9 @@ async function getTrains(date, time) {
     const formatedTime = moment(time).format(timeFormat);
 
     const result = await axios.get(
-      `https://transportapi.com/v3/uk/train/station/KGX/${formatedDate}/${formatedTime}/timetable.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`,
+      `https://transportapi.com/v3/uk/train/station/CHX/${formatedDate}/${formatedTime}/timetable.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`,
     );
+    console.log(result.data.departures);
     return result.data && result.data.departures && result.data.departures.all || [];
   } catch (error) {
     console.log(error);

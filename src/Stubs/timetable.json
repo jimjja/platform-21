@@ -1,0 +1,456 @@
+{
+  "departures": {
+    "all": [
+      {
+        "mode": "train",
+        "service": "24650005",
+        "train_uid": "W83126",
+        "platform": "5",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:24",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83126/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24602004",
+        "train_uid": "W82320",
+        "platform": "6",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:30",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Tunbridge Wells",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W82320/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24657005",
+        "train_uid": "W80785",
+        "platform": "2",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:32",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Gravesend",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W80785/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24655005",
+        "train_uid": "W84003",
+        "platform": "5",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:35",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Sevenoaks",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W84003/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24653005",
+        "train_uid": "W81052",
+        "platform": "3",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:37",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Hayes (Kent)",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W81052/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24605004",
+        "train_uid": "W83847",
+        "platform": "4",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:40",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dover Priory",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83847/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24658005",
+        "train_uid": "W82925",
+        "platform": "1",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:42",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W82925/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24602004",
+        "train_uid": "W80338",
+        "platform": "6",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:45",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Hastings",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W80338/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24657005",
+        "train_uid": "W83493",
+        "platform": "2",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:48",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83493/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24650005",
+        "train_uid": "W83135",
+        "platform": "5",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "12:54",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83135/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24602004",
+        "train_uid": "W82324",
+        "platform": "6",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:00",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Tunbridge Wells",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W82324/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24657005",
+        "train_uid": "W80787",
+        "platform": "2",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:02",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Gravesend",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W80787/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24655005",
+        "train_uid": "W84008",
+        "platform": "5",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:05",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Sevenoaks",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W84008/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24653005",
+        "train_uid": "W81054",
+        "platform": "3",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:07",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Hayes (Kent)",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W81054/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24605004",
+        "train_uid": "W83850",
+        "platform": "4",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:10",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Ramsgate",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83850/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24658005",
+        "train_uid": "W82928",
+        "platform": "1",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:12",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W82928/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24602004",
+        "train_uid": "W80341",
+        "platform": "6",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:15",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Hastings",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W80341/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24657005",
+        "train_uid": "W83505",
+        "platform": "2",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:18",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83505/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24650005",
+        "train_uid": "W83144",
+        "platform": "5",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:24",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83144/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24602004",
+        "train_uid": "W82326",
+        "platform": "6",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:30",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Tunbridge Wells",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W82326/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24657005",
+        "train_uid": "W80789",
+        "platform": "2",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:32",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Gravesend",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W80789/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24655005",
+        "train_uid": "W84013",
+        "platform": "5",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:35",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Sevenoaks",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W84013/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24653005",
+        "train_uid": "W81056",
+        "platform": "3",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:37",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Hayes (Kent)",
+        "source": "ATOC",
+        "category": "XX",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W81056/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24605004",
+        "train_uid": "W83856",
+        "platform": "4",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:40",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dover Priory",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W83856/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      },
+      {
+        "mode": "train",
+        "service": "24658005",
+        "train_uid": "W82931",
+        "platform": "1",
+        "operator": "SE",
+        "operator_name": "Southeastern",
+        "aimed_departure_time": "13:42",
+        "aimed_arrival_time": null,
+        "aimed_pass_time": null,
+        "origin_name": "London Charing Cross",
+        "destination_name": "Dartford",
+        "source": "ATOC",
+        "category": "OO",
+        "service_timetable": {
+          "id": "https://transportapi.com/v3/uk/train/service/train_uid:W82931/2019-10-17/timetable.json?app_id=0132e52f&app_key=2fbb429bb4a837934d8b9dc36b8bab5d"
+        }
+      }
+    ]
+  }
+}
