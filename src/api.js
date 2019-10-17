@@ -17,7 +17,7 @@ function getOffsetTime(dateTime) {
   return date.toLocaleTimeString('en-gb', options);
 }
 
-async function getTrains(date, time, fromOffsetTime, toOffsetTime) {
+async function getTrains(trainStation, date, time, fromOffsetTime, toOffsetTime) {
   if (!date || !time) {
     throw new Error('Date and time are missing');
   }
@@ -25,7 +25,6 @@ async function getTrains(date, time, fromOffsetTime, toOffsetTime) {
     const formatedDate = moment(date).format(dateFormat);
     const formatedTime = moment(time).format(timeFormat);
 
-    const stationCode = 'CHX';
     const fromOffset = fromOffsetTime.format(offsetFormat);
     const toOffset = toOffsetTime.format(offsetFormat);
 
@@ -38,10 +37,14 @@ async function getTrains(date, time, fromOffsetTime, toOffsetTime) {
     ];
 
     const result = await axios.get(
-      `https://transportapi.com/v3/uk/train/station/${stationCode}/${formatedDate}/${formatedTime}/timetable.json?${queryString.join('&')}`,
+      `https://transportapi.com/v3/uk/train/station/${trainStation}/${formatedDate}/${formatedTime}/timetable.json?${queryString.join(
+        '&',
+      )}`,
     );
-    console.log(result.data.departures);
-    return (result.data && result.data.departures && result.data.departures.all) || [];
+    return (
+      (result.data && result.data.departures && result.data.departures.all)
+      || []
+    );
   } catch (error) {
     console.log(error);
     throw error;

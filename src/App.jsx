@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Layout, Row, Col } from 'antd';
-import List from './Components/List';
 import RevealedItem from './Components/RevealedItem';
-import Timer from './Components/Timer';
-import Timetable from './Stubs/timetable.json';
 import { randomNumber } from './Services/helpers';
 import './App.less';
 import Form from './Components/Form';
@@ -25,10 +22,16 @@ function App() {
   }
 
   async function getDepartures({
-    date, time, offsetFrom, offsetTo,
+    date, time, offsetFrom, offsetTo, trainStation,
   }) {
     setIsLoading(true);
-    const result = await getTrains(date, time, offsetFrom, offsetTo);
+    const result = await getTrains(
+      trainStation,
+      date,
+      time,
+      offsetFrom,
+      offsetTo,
+    );
     setDepartures(result);
 
     selectRandomDeparture(result);

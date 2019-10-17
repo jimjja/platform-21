@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   Form, Button, DatePicker, TimePicker, Row, Col, Collapse,
 } from 'antd';
 import moment from 'moment';
 import DataField from '../DataField';
 import './Form.less';
+import Trains from '../../Data/trains.json';
+import Select from '../Select';
 
 function hasErrors(fieldsError) {
   return Object.keys(fieldsError).some((field) => fieldsError[field]);
@@ -35,10 +37,11 @@ function SearchDeparturesForms(props) {
     let date;
     let offsetFrom;
     let offsetTo;
+    let station;
 
     props.form.validateFields(
       (err, {
-        timeDeparture, dateDeparture, timeOffsetFrom, timeOffsetTo,
+        timeDeparture, dateDeparture, timeOffsetFrom, timeOffsetTo, trainStation,
       }) => {
         if (err) {
           return;
@@ -48,10 +51,11 @@ function SearchDeparturesForms(props) {
         date = dateDeparture;
         offsetFrom = timeOffsetFrom;
         offsetTo = timeOffsetTo;
+        station = trainStation;
       },
     );
 
-    if (!time || !date || !offsetFrom || !offsetTo) {
+    if (!time || !date || !offsetFrom || !offsetTo || !station) {
       return;
     }
 
@@ -61,6 +65,7 @@ function SearchDeparturesForms(props) {
         time,
         offsetFrom,
         offsetTo,
+        trainStation: station,
       });
     }
   }
@@ -82,6 +87,40 @@ function SearchDeparturesForms(props) {
             key="1"
             className="departure-form__options"
           >
+            <Row>
+              <Form.Item
+                label="Departure Date"
+                validateStatus={dateDepartureError ? 'error' : ''}
+                help={dateDepartureError || ''}
+              >
+                <DataField
+                  label="Train Station"
+                  value={getFieldValue('trainStation')}
+                  isDisabled={false}
+                >
+                  {getFieldDecorator('trainStation', {
+                    initialValue: 'KGX',
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input departure train station!',
+                      },
+                    ],
+                  })(
+                    <Select
+                      style={{ width: 200 }}
+                      showSearch
+                      placeholder="Select train station"
+                      onChange={(station) => {
+                        setFieldsValue({ trainStation: station });
+                      }}
+                      data={Trains}
+                      // value="KGX"
+                    />,
+                  )}
+                </DataField>
+              </Form.Item>
+            </Row>
             <Row>
               <Form.Item
                 label="Departure Date"

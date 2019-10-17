@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tag, Button } from 'antd';
+import { Tag } from 'antd';
 
 function DataField({ isDisabled, value, children }) {
   const [readOnly, setReadOnly] = useState(true);
@@ -12,14 +12,7 @@ function DataField({ isDisabled, value, children }) {
     if (readOnly) {
       return <Tag closable onClose={() => { setReadOnly(!readOnly); }}> {value}</Tag>;
     }
-    return (
-      <>
-        <span>{children}</span>
-        <span>
-          <Button type="default" icon="close" />
-        </span>
-      </>
-    );
+    return children;
   }
 
   return isDisabled ? getTag() : getStatefulField();

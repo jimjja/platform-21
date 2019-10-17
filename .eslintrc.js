@@ -22,6 +22,7 @@ module.exports = {
   ],
   rules: {
     "react/prop-types": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off"
   },
 };
