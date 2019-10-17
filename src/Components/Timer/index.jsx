@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from 'antd';
 import './Timer.less';
 
@@ -24,11 +24,12 @@ function countdownTime(secs) {
   };
 }
 
-function Timer({ timeSeconds = 10, displayButtons = true }) {
+function Timer({ timeSeconds = 10, displayButtons = true, onFinished = null }) {
   const seconds = useRef(timeSeconds);
   const [currTime, setCurrTime] = useState(countdownTime(seconds.current));
   const [isOn, setIsOn] = useState(false);
   const timer = useRef(0);
+
 
   function countDown() {
     // Remove one second, set state so a re-render happens.
@@ -40,6 +41,9 @@ function Timer({ timeSeconds = 10, displayButtons = true }) {
     if (seconds.current === 0) {
       clearInterval(timer.current);
       setIsOn(false);
+      if (onFinished) {
+        onFinished();
+      }
     }
   }
 
@@ -63,6 +67,13 @@ function Timer({ timeSeconds = 10, displayButtons = true }) {
     setCurrTime(countdownTime(seconds.current));
     setIsOn(false);
   }
+
+
+  useEffect(() => {
+    if (!displayButtons) {
+      startTimer();
+    }
+  }, []);
 
   return (
     <div>

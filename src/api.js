@@ -6,6 +6,7 @@ const appId = '0132e52f';
 
 const dateFormat = 'YYYY-MM-DD';
 const timeFormat = 'HH:mm';
+const offsetFormat = 'HH:mm:ss';
 
 function getOffsetTime(dateTime) {
   const noDigits = '2-digit';
@@ -16,7 +17,7 @@ function getOffsetTime(dateTime) {
   return date.toLocaleTimeString('en-gb', options);
 }
 
-async function getTrains(date, time) {
+async function getTrains(date, time, fromOffsetTime, toOffsetTime) {
   if (!date || !time) {
     throw new Error('Date and time are missing');
   }
@@ -25,8 +26,8 @@ async function getTrains(date, time) {
     const formatedTime = moment(time).format(timeFormat);
 
     const stationCode = 'CHX';
-    const fromOffset = getOffsetTime(new Date('10-10-2019 00:15:00'));
-    const toOffset = getOffsetTime(new Date('10-10-2019 00:45:00'));
+    const fromOffset = fromOffsetTime.format(offsetFormat);
+    const toOffset = toOffsetTime.format(offsetFormat);
 
     const queryString = [
       `app_id=${appId}`,
