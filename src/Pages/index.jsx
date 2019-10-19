@@ -1,52 +1,40 @@
 import React from 'react';
-// import { Router } from '@reach/router';
-import { Layout } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
-  BrowserRouter as Router, Switch, Route,
+  HashRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
-
-import Play from './Play';
-import HowTo from './HowTo';
+import Routes from '../routes';
 
 const { Content, Footer } = Layout;
 
-const routes = [
-  {
-    component: Play,
-    path: '/',
-    label: 'Home',
-  },
-  {
-    component: HowTo,
-    path: '/how-to',
-    label: 'How to play',
-  },
-];
 
 export default function Page() {
   return (
     <Layout className="layout App" theme="light">
-      {/* <Menu mode="inline" selectedKeys={[routes[0].path]}>
-        {routes.map((page) => (
-          <Menu.Item key={page.path}>
-            <Link to={page.path}>{page.label}</Link>
-          </Menu.Item>
-        ))}
-      </Menu> */}
-      <Content theme="light" className="content-wrapper">
-        <Router>
+      <Router>
+        {/* <Menu mode="horizontal">
+          {Routes.map((page) => (
+            <Menu.Item key={page.path}>
+              <Link to={page.path}>{page.label}</Link>
+            </Menu.Item>
+          ))}
+        </Menu> */}
+        <Content theme="light" className="content-wrapper">
           <Switch>
-            {routes.map((page) => (
-              <Route key={page.path} path={page.path}>
-                <page.component />
-              </Route>
+            {Routes.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                exact={route.exact}
+                component={route.component}
+              />
             ))}
           </Switch>
-        </Router>
-      </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        ©{new Date().getFullYear()} Created by D&J
-      </Footer>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          ©{new Date().getFullYear()} Created by D&J
+        </Footer>
+      </Router>
     </Layout>
   );
 }
