@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/platform-roulette/static/css/main.b706dc16.chunk.css",
+    "main.js": "/platform-roulette/static/js/main.dee52a77.chunk.js",
+    "main.js.map": "/platform-roulette/static/js/main.dee52a77.chunk.js.map",
+    "runtime-main.js": "/platform-roulette/static/js/runtime-main.276385c7.js",
+    "runtime-main.js.map": "/platform-roulette/static/js/runtime-main.276385c7.js.map",
+    "static/css/2.805e359d.chunk.css": "/platform-roulette/static/css/2.805e359d.chunk.css",
+    "static/js/2.d0883d27.chunk.js": "/platform-roulette/static/js/2.d0883d27.chunk.js",
+    "static/js/2.d0883d27.chunk.js.map": "/platform-roulette/static/js/2.d0883d27.chunk.js.map",
+    "index.html": "/platform-roulette/index.html",
+    "precache-manifest.5d8d8e26df9efa9e2bc2530b8bb857be.js": "/platform-roulette/precache-manifest.5d8d8e26df9efa9e2bc2530b8bb857be.js",
+    "service-worker.js": "/platform-roulette/service-worker.js",
+    "static/css/2.805e359d.chunk.css.map": "/platform-roulette/static/css/2.805e359d.chunk.css.map",
+    "static/css/main.b706dc16.chunk.css.map": "/platform-roulette/static/css/main.b706dc16.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.276385c7.js",
+    "static/css/2.805e359d.chunk.css",
+    "static/js/2.d0883d27.chunk.js",
+    "static/css/main.b706dc16.chunk.css",
+    "static/js/main.dee52a77.chunk.js"
+  ]
+}
