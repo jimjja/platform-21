@@ -1,6 +1,9 @@
 import React from 'react';
-import { Router, Link } from '@reach/router';
-import { Layout, Menu } from 'antd';
+// import { Router } from '@reach/router';
+import { Layout } from 'antd';
+import {
+  BrowserRouter as Router, Switch, Route,
+} from 'react-router-dom';
 
 import Play from './Play';
 import HowTo from './HowTo';
@@ -32,9 +35,13 @@ export default function Page() {
       </Menu> */}
       <Content theme="light" className="content-wrapper">
         <Router>
-          {routes.map((page) => (
-            <page.component key={page.path} path={page.path} />
-          ))}
+          <Switch>
+            {routes.map((page) => (
+              <Route key={page.path} path={page.path}>
+                <page.component />
+              </Route>
+            ))}
+          </Switch>
         </Router>
       </Content>
       <Footer style={{ textAlign: 'center' }}>

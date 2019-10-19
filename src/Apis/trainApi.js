@@ -1,8 +1,8 @@
 import moment from 'moment';
 import Http from '../Services/http';
 
-const appKey = '2fbb429bb4a837934d8b9dc36b8bab5d';
-const appId = '0132e52f';
+const appKey = process.env.REACT_APP_TRANSPORTAPI_APP_KEY;
+const appId = process.env.REACT_APP_TRANSPORTAPI_APP_ID;
 
 const dateFormat = 'YYYY-MM-DD';
 const timeFormat = 'HH:mm';
