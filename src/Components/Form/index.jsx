@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Form, Button, DatePicker, TimePicker, Row, Col, Collapse,
 } from 'antd';
@@ -13,6 +13,9 @@ function hasErrors(fieldsError) {
 }
 
 function SearchDeparturesForms(props) {
+  const [manualTimeSetup, setManualTimeSetup] = useState(false);
+
+
   const {
     form: {
       getFieldDecorator,
@@ -27,6 +30,21 @@ function SearchDeparturesForms(props) {
   const dateDepartureError = isFieldTouched('date-departure') && getFieldError('date-departure');
   const timeDepartureError = isFieldTouched('time-departure') && getFieldError('time-departure');
 
+
+  useEffect(() => {
+    if (manualTimeSetup) {
+      return () => { };
+    }
+
+    const interval = setInterval(() => {
+      setFieldsValue({ timeDeparture: moment() });
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
+
   useEffect(() => {
     props.form.validateFields();
   }, []);
@@ -40,9 +58,16 @@ function SearchDeparturesForms(props) {
     let station;
 
     props.form.validateFields(
-      (err, {
-        timeDeparture, dateDeparture, timeOffsetFrom, timeOffsetTo, trainStation,
-      }) => {
+      (
+        err,
+        {
+          timeDeparture,
+          dateDeparture,
+          timeOffsetFrom,
+          timeOffsetTo,
+          trainStation,
+        },
+      ) => {
         if (err) {
           return;
         }
@@ -76,6 +101,16 @@ function SearchDeparturesForms(props) {
       return fieldValue.format(format);
     }
     return fieldValue;
+  }
+
+  function disabledDate(current) {
+    return (
+      current
+      && current
+        < moment()
+          .subtract(1, 'days')
+          .endOf('day')
+    );
   }
 
   return (
@@ -115,7 +150,6 @@ function SearchDeparturesForms(props) {
                         setFieldsValue({ trainStation: station });
                       }}
                       data={Trains}
-                      // value="KGX"
                     />,
                   )}
                 </DataField>
@@ -143,6 +177,7 @@ function SearchDeparturesForms(props) {
                   })(
                     <DatePicker
                       placeholder="Departure Date"
+                      disabledDate={disabledDate}
                       onChange={(date, dateStr) => {
                         setFieldsValue({ dateDeparture: dateStr });
                       }}
@@ -169,8 +204,11 @@ function SearchDeparturesForms(props) {
                     ],
                   })(
                     <TimePicker
-                      format="HH:mm"
-                      onChange={(currTime, currTimeStr) => {
+                      format="HH:mm:ss"
+                      onOpenChange={() => {
+                        setManualTimeSetup(true);
+                      }}
+                      onChange={(t, currTimeStr) => {
                         setFieldsValue({ timeDeparture: currTimeStr });
                       }}
                     />,
@@ -179,13 +217,16 @@ function SearchDeparturesForms(props) {
               </Form.Item>
             </Row>
             <Row>
+              <p style={{ margin: 0 }}>Time range for train departures</p>
+            </Row>
+            <Row>
               <Form.Item
-                label="Offset Time From"
+                label="From"
                 validateStatus={timeDepartureError ? 'error' : ''}
                 help={timeDepartureError || ''}
               >
                 <DataField
-                  label="Offset Time From"
+                  label="From"
                   value={getDataValue('timeOffsetFrom', 'HH:mm')}
                   isDisabled={false}
                 >
@@ -211,12 +252,12 @@ function SearchDeparturesForms(props) {
                 </DataField>
               </Form.Item>
               <Form.Item
-                label="Offset Time To"
+                label="To"
                 validateStatus={timeDepartureError ? 'error' : ''}
                 help={timeDepartureError || ''}
               >
                 <DataField
-                  label="Offset Time To"
+                  label="To"
                   value={getDataValue('timeOffsetTo', 'HH:mm')}
                   isDisabled={false}
                 >

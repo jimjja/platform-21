@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import {
   Spin, Card, Button, Row, Col,
 } from 'antd';
+import moment from 'moment';
 import Timer from '../Timer';
 import './RevealedItem.less';
 
-const TIMER_SECS = 5;
+const TIMER_SECS = 1;
 
 function RevealedItem({
   isLoading = false,
@@ -30,13 +31,16 @@ function RevealedItem({
     );
   }
 
+  function getTimeToDeparture() {
+    const time = departureTime.split(':');
+    return moment().hours(time[0]).minutes(time[1]).fromNow();
+  }
+
   function getTitle() {
     return (
       <div>
         <Row type="flex" justify="space-between" align="middle">
-          <Col>
-            {isRevealed ? title : ''}
-          </Col>
+          <Col>{isRevealed ? title : ''}</Col>
           <Col>
             <Button
               onClick={() => setIsRevealed(!isRevealed)}
@@ -78,6 +82,11 @@ function RevealedItem({
             <Col>
               <p>
                 <strong>Total Items:</strong> {totalItems}
+              </p>
+            </Col>
+            <Col>
+              <p>
+                <strong>Departs</strong> {getTimeToDeparture()}
               </p>
             </Col>
           </Row>
