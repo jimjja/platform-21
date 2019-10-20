@@ -68,36 +68,7 @@ export default function PlayGame() {
           </h1>
         </Col>
       </Row>
-      <Row align="middle">
-        <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
-          <span>From: </span>
-          <span
-            style={{
-              display: 'block',
-              fontWeight: 'bold',
-              fontSize: '1.2em',
-              fontVariantCaps: 'all-small-caps',
-              marginTop: '-5px',
-            }}
-          >
-            Kings Cross
-          </span>
-        </Col>
-        <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
-          <span>Start date: </span>
-          <span
-            style={{
-              display: 'block',
-              fontWeight: 'bold',
-              fontSize: '1.2em',
-              fontVariantCaps: 'all-small-caps',
-              marginTop: '-5px',
-            }}
-          >
-            {moment().format('DD:MM:YYYY HH:mm')}
-          </span>
-        </Col>
-      </Row>
+
       <Row className="content-wrapper__row">
         <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
           <Form onSubmit={getDepartures} />

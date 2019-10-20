@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Form,
-  Button,
-  DatePicker,
-  TimePicker,
-  Row,
-  Col,
-  Collapse,
+  Form, Button, DatePicker, TimePicker, Row, Col, Collapse,
 } from 'antd';
 import moment from 'moment';
 import DataField from '../DataField';
@@ -119,10 +113,9 @@ function SearchDeparturesForms(props) {
 
   return (
     <Form layout="inline" onSubmit={handleSubmit}>
+
       <Row>
-        <Collapse
-          bordered={false}
-        >
+        <Collapse bordered={false}>
           <Collapse.Panel
             header="Options"
             key="1"
@@ -170,7 +163,7 @@ function SearchDeparturesForms(props) {
               >
                 <DataField
                   label="Departure Date"
-                  value={getDataValue('dateDeparture', 'DD-MM-YYYY')}
+                  value={getDataValue('dateDeparture', 'DD-MMM-YYYY')}
                   isDisabled={false}
                 >
                   {getFieldDecorator('dateDeparture', {
@@ -183,6 +176,7 @@ function SearchDeparturesForms(props) {
                     ],
                   })(
                     <DatePicker
+                      format="DD-MMM-YYYY"
                       placeholder="Departure Date"
                       disabledDate={disabledDate}
                       onChange={(date, dateStr) => {
@@ -211,7 +205,7 @@ function SearchDeparturesForms(props) {
                     ],
                   })(
                     <TimePicker
-                      format="HH:mm:ss"
+                      format="HH:mm"
                       onOpenChange={() => {
                         setManualTimeSetup(true);
                       }}
@@ -292,6 +286,21 @@ function SearchDeparturesForms(props) {
             </Row>
           </Collapse.Panel>
         </Collapse>
+      </Row>
+      <Row type="flex" justify="start" gutter={20}>
+        <Col>
+          <span>From: </span>
+          <span className="departure-form__display-value">
+            {getFieldValue('trainStation')}
+          </span>
+        </Col>
+        <Col>
+          <span>Start date: </span>
+          <span className="departure-form__display-value">
+            {getDataValue('dateDeparture', 'DD-MMM-YYYY')}{' '}
+            {getDataValue('timeDeparture', 'HH:mm')}
+          </span>
+        </Col>
       </Row>
       <Row type="flex" justify="center">
         <Col>
