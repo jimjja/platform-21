@@ -1,11 +1,22 @@
+@import "~@ant-design/aliyun-theme/index.less";
+
 .departure-form {
-  // max-width: 30%;
   &__options {
     margin-bottom: 1em;
   }
 
   &__search-button {
-    height: 10vh;
+    background: @success-color;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    height: 15vh;
+    width: 15vh;
     font-size: 5vh;
+
+    &:focus, &:hover {
+      color: @success-color;
+      border-color: @success-color;
+    }
   }
 }

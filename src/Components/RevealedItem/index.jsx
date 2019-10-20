@@ -6,7 +6,7 @@ import moment from 'moment';
 import Timer from '../Timer';
 import './RevealedItem.less';
 
-const TIMER_SECS = 5;
+const TIMER_SECS = 3;
 
 function RevealedItem({
   isLoading = false,

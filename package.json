@@ -1,13 +1,13 @@
 {
-  "homepage": "https://jimjja.github.io/platform-roulette",
-  "name": "platform-roulette",
+  "homepage": "https://jimjja.github.io/platform-21",
+  "name": "platform-21",
   "author": {
     "name": "Jemal Ahmedov"
   },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ant-design/dark-theme": "^1.0.3",
+    "@ant-design/aliyun-theme": "^0.0.3",
     "antd": "^3.23.6",
     "axios": "^0.19.0",
     "babel-plugin-import": "^1.12.2",

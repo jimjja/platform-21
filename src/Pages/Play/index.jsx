@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import {
   Row, Col, Alert,
 } from 'antd';
+import moment from 'moment';
 import RevealedItem from '../../Components/RevealedItem';
 import { randomNumber } from '../../Services/helpers';
 import Form from '../../Components/Form';
 import TrainsAPI from '../../Apis/trainApi';
+import PlatformLogo from '../../assets/platform.png';
 
 const trainsApi = new TrainsAPI();
 
@@ -48,22 +50,70 @@ export default function PlayGame() {
 
   return (
     <>
+      <Row type="flex" justify="center">
+        <Col>
+          <h1
+            style={{
+              fontWeight: 'bold',
+              fontVariantCaps: 'all-small-caps',
+              fontSize: '1.5em',
+            }}
+          >
+            <img
+              alt="Platform 21 logo"
+              style={{ width: '3.5em' }}
+              src={PlatformLogo}
+            />
+            Platform 21
+          </h1>
+        </Col>
+      </Row>
+      <Row align="middle">
+        <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
+          <span>From: </span>
+          <span
+            style={{
+              display: 'block',
+              fontWeight: 'bold',
+              fontSize: '1.2em',
+              fontVariantCaps: 'all-small-caps',
+              marginTop: '-5px',
+            }}
+          >
+            Kings Cross
+          </span>
+        </Col>
+        <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
+          <span>Start date: </span>
+          <span
+            style={{
+              display: 'block',
+              fontWeight: 'bold',
+              fontSize: '1.2em',
+              fontVariantCaps: 'all-small-caps',
+              marginTop: '-5px',
+            }}
+          >
+            {moment().format('DD:MM:YYYY HH:mm')}
+          </span>
+        </Col>
+      </Row>
       <Row className="content-wrapper__row">
         <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
           <Form onSubmit={getDepartures} />
         </Col>
       </Row>
-      { errorMessage && errorMessage.length && (
-      <Row className="content-wrapper__row">
-        <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
-          <Alert
-            message="Error"
-            description={errorMessage}
-            type="error"
-            showIcon
-          />
-        </Col>
-      </Row>
+      {errorMessage && errorMessage.length && (
+        <Row className="content-wrapper__row">
+          <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>
+            <Alert
+              message="Error"
+              description={errorMessage}
+              type="error"
+              showIcon
+            />
+          </Col>
+        </Row>
       )}
       <Row className="content-wrapper__row">
         <Col sm={{ span: 12, offset: 6 }} xs={{ span: 24, offset: 0 }}>

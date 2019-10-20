@@ -1,5 +1,7 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import {
+  Layout, Menu, Row, Col,
+} from 'antd';
 import {
   HashRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
@@ -10,7 +12,7 @@ const { Content, Footer } = Layout;
 
 export default function Page() {
   return (
-    <Layout className="layout App" theme="light">
+    <Layout className="App" style={{ background: '#fff' }} theme="light">
       <Router>
         {/* <Menu mode="horizontal">
           {Routes.map((page) => (
@@ -31,7 +33,7 @@ export default function Page() {
             ))}
           </Switch>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
+        <Footer style={{ textAlign: 'center', background: '#ffffff', borderTop: '1px solid #ccc' }}>
           ©{new Date().getFullYear()} Created by D&J
         </Footer>
       </Router>

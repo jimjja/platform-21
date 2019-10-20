@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Form, Button, DatePicker, TimePicker, Row, Col, Collapse,
+  Form,
+  Button,
+  DatePicker,
+  TimePicker,
+  Row,
+  Col,
+  Collapse,
 } from 'antd';
 import moment from 'moment';
 import DataField from '../DataField';
@@ -14,7 +20,6 @@ function hasErrors(fieldsError) {
 
 function SearchDeparturesForms(props) {
   const [manualTimeSetup, setManualTimeSetup] = useState(false);
-
 
   const {
     form: {
@@ -30,10 +35,9 @@ function SearchDeparturesForms(props) {
   const dateDepartureError = isFieldTouched('date-departure') && getFieldError('date-departure');
   const timeDepartureError = isFieldTouched('time-departure') && getFieldError('time-departure');
 
-
   useEffect(() => {
     if (manualTimeSetup) {
-      return () => { };
+      return () => {};
     }
 
     const interval = setInterval(() => {
@@ -116,7 +120,9 @@ function SearchDeparturesForms(props) {
   return (
     <Form layout="inline" onSubmit={handleSubmit}>
       <Row>
-        <Collapse bordered={false}>
+        <Collapse
+          bordered={false}
+        >
           <Collapse.Panel
             header="Options"
             key="1"
@@ -124,7 +130,8 @@ function SearchDeparturesForms(props) {
           >
             <Row>
               <Form.Item
-                label="Departure Date"
+                placeholder="Enter train station"
+                label="Train Station"
                 validateStatus={dateDepartureError ? 'error' : ''}
                 help={dateDepartureError || ''}
               >
@@ -286,17 +293,18 @@ function SearchDeparturesForms(props) {
           </Collapse.Panel>
         </Collapse>
       </Row>
-      <Row>
+      <Row type="flex" justify="center">
         <Col>
           <Button
+            shape="circle"
             size="large"
-            block
+            // block
             className="departure-form__search-button"
-            type="primary"
+            type="switch"
             htmlType="submit"
             disabled={hasErrors(getFieldsError())}
           >
-            Play
+            GO
           </Button>
         </Col>
       </Row>

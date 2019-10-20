@@ -1,5 +1,5 @@
 const { override, fixBabelImports, addLessLoader } = require('customize-cra');
-const darkTheme = require('@ant-design/dark-theme');
+const aliyunTheme = require('@ant-design/aliyun-theme');
 
 module.exports = override(
   fixBabelImports('import', {
@@ -9,6 +9,6 @@ module.exports = override(
   }),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: darkTheme,
+    modifyVars: aliyunTheme,
   }),
 );
