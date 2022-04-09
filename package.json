@@ -15,7 +15,7 @@
     "gh-pages": "^2.1.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-app-rewired": "^2.1.3",
